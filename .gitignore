@@ -1,0 +1,16 @@
+# Security & Secrets
+.env
+*.pem
+*.key
+
+# Environments & Virtualenv
+venv/
+ENV/
+env/
+__pycache__/
+*.pyc
+
+# Downloads & Temp
+downloads/
+*.log
+*.tmp

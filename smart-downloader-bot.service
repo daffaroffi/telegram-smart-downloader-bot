@@ -1,0 +1,15 @@
+[Unit]
+Description=Smart Downloader Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/my-project/smart-downloader-bot
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/root/my-project/smart-downloader-bot/venv/bin/python /root/my-project/smart-downloader-bot/bot.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
