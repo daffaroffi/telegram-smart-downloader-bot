@@ -13,21 +13,12 @@ import telebot
 from telebot import types
 
 # ==================== CONFIGURATION ====================
-def load_env_file(filepath):
-    if os.path.exists(filepath):
-        with open(filepath, 'r', encoding='utf-8') as f:
-            for line in f:
-                line = line.strip()
-                if line and not line.startswith('#') and '=' in line:
-                    k, v = line.split('=', 1)
-                    os.environ[k.strip()] = v.strip().strip('"').strip("'")
-
-# Load local .env if available
-load_env_file(os.path.join(os.path.dirname(__file__), '.env'))
-
-BOT_TOKEN = os.getenv("BOT_TOKEN", "your_telegram_bot_token_here")
-ALLOWED_USER_ID = int(os.getenv("ALLOWED_USER_ID", "8927082329"))
-DOWNLOAD_DIR = os.getenv("DOWNLOAD_DIR", "/root/my-project/downloads")
+BOT_TOKEN = "8858362577:AAHa0b0JAXvqXlDqpAi8PbK1rGIwbdEA0fo"
+ALLOWED_USER_ID = 8927082329
+DOWNLOAD_DIR = "/root/my-project/downloads"
+YTDLP_BIN = "/usr/local/bin/yt-dlp"
+if not os.path.exists(YTDLP_BIN):
+    YTDLP_BIN = "yt-dlp"
 
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
