@@ -375,18 +375,6 @@ def send_welcome(message):
     bot.send_message(message.chat.id, text, reply_markup=markup)
 
 # Command: /traffic
-@bot.message_handler(commands=['traffic'])
-def handle_traffic(message):
-    if not is_authorized(message.from_user.id):
-        return
-    markup = types.InlineKeyboardMarkup()
-    markup.add(
-        types.InlineKeyboardButton("🔄 Refresh Traffic", callback_data="cmd_traffic"),
-        types.InlineKeyboardButton("📊 System Health", callback_data="cmd_status")
-    )
-    bot.reply_to(message, get_traffic_stats(), reply_markup=markup)
-
-# Command: /status
 @bot.message_handler(commands=['status'])
 def handle_status(message):
     if not is_authorized(message.from_user.id):
@@ -984,8 +972,6 @@ def handle_callback(call):
 if __name__ == '__main__':
     print(f"Starting Smart Downloader PRO & IP Traffic Notifier for User ID {ALLOWED_USER_ID}...")
     
-    # Start Realtime Nginx Log Tailer Thread in background
-    tailer_thread = threading.Thread(target=realtime_nginx_tailer, daemon=True)
-    tailer_thread.start()
+    
     
     bot.infinity_polling(timeout=20, long_polling_timeout=10)
