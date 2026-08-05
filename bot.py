@@ -13,7 +13,7 @@ import telebot
 from telebot import types
 
 # ==================== CONFIGURATION ====================
-BOT_TOKEN = "8858362577:AAHa0b0JAXvqXlDqpAi8PbK1rGIwbdEA0fo"
+BOT_TOKEN = "your_telegram_bot_token_here"
 ALLOWED_USER_ID = 8927082329
 DOWNLOAD_DIR = "/root/my-project/downloads"
 YTDLP_BIN = "/usr/local/bin/yt-dlp"
