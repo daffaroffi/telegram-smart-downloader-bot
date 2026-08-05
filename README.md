@@ -21,8 +21,8 @@ High-performance Telegram Bot engine deployed on Linux VPS for multi-threaded me
 
 1. **Clone Repository**:
    ```bash
-   git clone https://github.com/daffaroffi/smart-downloader-bot.git
-   cd smart-downloader-bot
+   git clone https://github.com/daffaroffi/telegram-smart-downloader-bot.git
+   cd telegram-smart-downloader-bot
    ```
 
 2. **Configure Environment Variables**:
@@ -53,9 +53,9 @@ After=network.target
 
 [Service]
 User=root
-WorkingDirectory=/root/my-project/smart-downloader-bot
-EnvironmentFile=/root/my-project/smart-downloader-bot/.env
-ExecStart=/root/my-project/smart-downloader-bot/venv/bin/python /root/my-project/smart-downloader-bot/bot.py
+WorkingDirectory=/root/my-project/telegram-smart-downloader-bot
+EnvironmentFile=/root/my-project/telegram-smart-downloader-bot/.env
+ExecStart=/root/my-project/telegram-smart-downloader-bot/venv/bin/python /root/my-project/telegram-smart-downloader-bot/bot.py
 Restart=always
 
 [Install]
