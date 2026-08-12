@@ -1,15 +1,19 @@
 # Smart Downloader PRO & Realtime Traffic Bot
 
+[English](README.md) | [Bahasa Indonesia](README-id.md)
+
+---
+
 High-performance Telegram Bot engine deployed on Linux VPS for multi-threaded media downloading (yt-dlp + Aria2c) and instant real-time Nginx web traffic push alerts.
 
-## 🌟 Key Features
+## Key Features
 
-- **⚡ Multi-Threaded Downloading Engine**: Powered by Aria2c (16 parallel connections) for direct files and yt-dlp resolution selector (1080p, 720p, 480p, 360p, MP3 Audio).
-- **🔔 Realtime Visitor Push Alerts**: Background Nginx log streamer pushing instant alerts to Telegram whenever a visitor hits your web portfolio.
-- **📊 VPS Health & File Manager**: In-chat file explorer, storage disk meter, RAM usage, and instant file deletion/cleaning.
-- **🛡️ Secure & Private**: Restricted to authorized Telegram User IDs only. Sensitive credentials managed via environment variables.
+- **Multi-Threaded Downloading Engine**: Powered by Aria2c (16 parallel connections) for direct files and yt-dlp resolution selector (1080p, 720p, 480p, 360p, MP3 Audio).
+- **Realtime Visitor Push Alerts**: Background Nginx log streamer pushing instant alerts to Telegram whenever a visitor hits your web portfolio.
+- **VPS Health & File Manager**: In-chat file explorer, storage disk meter, RAM usage, and instant file deletion/cleaning.
+- **Secure & Private**: Restricted to authorized Telegram User IDs only. Sensitive credentials managed via environment variables.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Python 3.12** / `pyTelegramBotAPI` (`telebot`)
 - **Aria2c** (16-Connection Multi-Thread Engine)
@@ -17,7 +21,7 @@ High-performance Telegram Bot engine deployed on Linux VPS for multi-threaded me
 - **Nginx Access Log Parser** (Real-Time Visitor Detection)
 - **Systemd** (Automated Linux Service Management)
 
-## 🚀 Quick Setup
+## Quick Setup
 
 1. **Clone Repository**:
    ```bash
@@ -43,7 +47,7 @@ High-performance Telegram Bot engine deployed on Linux VPS for multi-threaded me
    python bot.py
    ```
 
-## 📜 Systemd Integration
+## Systemd Integration
 
 To run as a system service on Ubuntu/Debian:
 ```ini
@@ -63,4 +67,5 @@ WantedBy=multi-user.target
 ```
 
 ---
+
 ***REMOVED***
